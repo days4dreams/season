@@ -18,7 +18,7 @@ $site = [
 
     // false while the site is being checked: Google is asked not to list it.
     // Change to true on launch day.
-    'launched' => false,
+    'launched' => true,
 
     // Where the "Enquire" buttons in the header and footer go.
     'booking_url' => '/enquire',
