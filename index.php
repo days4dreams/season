@@ -14,6 +14,7 @@ require __DIR__ . '/includes/head.php';
  *   'season'  the small handwritten word over the photo
  *   'colour'  the colour of the card's top edge (a colour from css/style.css)
  *   'photo'   a photo in /images/photos, or '' for an illustration instead
+ *             ('photo_pos' moves the crop: '50% 62%' shows more of the lower part)
  *   'status'  a short line under the description (leave '' for none)
  *   'link'    where the button goes ('' for a button that isn't a link yet)
  */
@@ -37,15 +38,15 @@ $homes = [
     [
         'id' => 'spring', 'season' => 'Spring', 'colour' => 'var(--shade)',
         'name' => 'Spring Hideaway', 'place' => 'Kingston Park',
-        'photo' => '', 'illustration' => 'illustrations/10-seedling.svg', 'panel' => 'var(--primary-light)',
+        'photo' => '/images/photos/spring-hideaway.jpg', 'photo_alt' => 'A plane taking off at sunset', 'photo_pos' => '50% 45%',
         'text' => "A small but perfectly formed home in the popular suburb of Kingston Park, Newcastle. With a stunning kitchen, cosy living space, one bedroom and modern bathroom, it's the ideal home from home. Dedicated off-street parking, a private back garden and plenty of home touches. Just seven minutes' drive from Newcastle Airport, and fifteen from the city centre, it's ideally positioned; what's more, a mere six-minute walk gets you to the Metro system, or Kingston Park's popular amenities: gym, supermarket, bakery and retail stores.",
         'status' => 'Currently in renovation.',
-        'button' => 'Enquire for Spring 2026', 'link' => '/enquire?home=spring-hideaway',
+        'button' => 'Enquire for Spring 2027', 'link' => '/enquire?home=spring-hideaway',
     ],
     [
         'id' => 'summer', 'season' => 'Summer', 'colour' => 'var(--sand)',
         'name' => 'Summer Season', 'place' => 'Coming Soon',
-        'photo' => '', 'illustration' => 'illustrations/04-flower.svg', 'panel' => 'var(--sand-light)',
+        'photo' => '/images/photos/summer-season.jpg', 'photo_alt' => 'Moving boxes and cushions by a window', 'photo_pos' => '50% 62%',
         'text' => "Our next adventure with Staying Season, Summer Season is in the works. We'll reveal full property details here soon.",
         'status' => 'Currently in renovation.',
         'button' => 'Coming Soon', 'link' => '',
@@ -73,7 +74,7 @@ $homes = [
       <article class="home-card" id="<?= e($home['id']) ?>" style="--card-colour: <?= e($home['colour']) ?>">
         <div class="home-media"<?= $home['photo'] === '' ? ' style="--panel: ' . e($home['panel']) . '"' : '' ?>>
 <?php if ($home['photo'] !== ''): ?>
-          <?= content_image($home['photo'], $home['photo_alt'], '', '3/2') ?>
+          <?= str_replace('<img ', '<img style="object-position: ' . e($home['photo_pos'] ?? '50% 50%') . '" ', content_image($home['photo'], $home['photo_alt'])) ?>
 <?php else: ?>
           <div class="home-panel"><?= svg($home['illustration'], 'illustration') ?></div>
 <?php endif; ?>
