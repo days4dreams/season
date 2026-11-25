@@ -23,7 +23,7 @@ $homes = [
         'id' => 'autumn', 'season' => 'Autumn', 'colour' => 'var(--tertiary)',
         'name' => 'Autumn House', 'place' => 'Alnwick, Northumberland',
         'photo' => '/images/photos/autumn-house.jpg', 'photo_alt' => 'The living room and wood burner at Autumn House',
-        'text' => 'A two-bedroom stone cottage in the heart of Alnwick, sleeping four. Curl up by the wood burner after a day at the castle, the gardens or the Northumberland coast.',
+        'text' => 'A two-bedroom stone cottage in the heart of Alnwick, sleeping four. Curl up in the cosy sitting room after a day at the castle, the gardens or the Northumberland coast.',
         'status' => 'Open for bookings',
         'button' => 'Visit Autumn House', 'link' => 'https://autumn.stayingseason.com',
     ],
@@ -39,7 +39,7 @@ $homes = [
         'id' => 'spring', 'season' => 'Spring', 'colour' => 'var(--shade)',
         'name' => 'Spring Hideaway', 'place' => 'Kingston Park',
         'photo' => '/images/photos/spring-hideaway.jpg', 'photo_alt' => 'A plane taking off at sunset', 'photo_pos' => '50% 45%',
-        'text' => "A small but perfectly formed home in the popular suburb of Kingston Park, Newcastle. With a stunning kitchen, cosy living space, one bedroom and modern bathroom, it's the ideal home from home. Dedicated off-street parking, a private back garden and plenty of home touches. Just seven minutes' drive from Newcastle Airport, and fifteen from the city centre, it's ideally positioned; what's more, a mere six-minute walk gets you to the Metro system, or Kingston Park's popular amenities: gym, supermarket, bakery and retail stores.",
+        'text' => "A small home in the popular suburb of Kingston Park, Newcastle. With a stunning kitchen, cosy living space, modern bedroom and bathroom, it's the ideal home from home. Dedicated parking, a private back garden and plenty of home touches. Just seven minutes' drive from Newcastle Airport, and fifteen from the city, it's ideally positioned. A short stroll from the Metro system, gym, supermarket, bakery and retail stores.",
         'status' => 'Currently in renovation.',
         'button' => 'Enquire for Spring 2027', 'link' => '/enquire?home=spring-hideaway',
     ],
@@ -106,8 +106,7 @@ $homes = [
     <div class="stack">
       <p class="label">About us</p>
       <h2>We're Lauren and David, and <em>we look after every home ourselves.</em></h2>
-      <p>Born and raised in the North East, we spent years living abroad, including several in New Zealand, before coming home. Today Lauren runs a sustainable design studio and David a tax advisory firm, and together we run Staying Season.</p>
-      <p>We're more "picnic on the beach" than "posh dinner", and we've put the same love of the outdoors and the simple things into each of our homes.</p>
+      <p>Born and raised in the North East, we spent years living abroad, including several in New Zealand, before returning to Northumberland. Today Lauren runs a web and graphic design studio and David a tax advisory firm, and together we run Staying Season.</p>
       <ul class="about-list">
         <li><strong>Book direct with us:</strong> it's always cheaper than booking through a platform, and you deal with us, not a call centre.</li>
         <li><strong>Short breaks or longer stays:</strong> from a weekend away to a month or more.</li>
